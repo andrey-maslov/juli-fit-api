@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "event",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "startsAt": {
+      "type": "time",
+      "default": "00:00"
+    },
+    "endsAt": {
+      "type": "time",
+      "default": "00:01"
+    },
+    "isFree": {
+      "type": "boolean",
+      "default": false
+    },
+    "totalCapacity": {
+      "type": "integer",
+      "default": 8,
+      "min": 0
+    },
+    "isCancelled": {
+      "type": "boolean",
+      "default": false
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "events"
+    },
+    "room": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::room.room",
+      "inversedBy": "events"
+    },
+    "trainer": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
