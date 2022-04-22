@@ -1,1 +1,1 @@
-web:node server.js
+web:node config/env/production/server.js
