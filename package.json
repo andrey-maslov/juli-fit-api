@@ -1,7 +1,7 @@
 {
   "name": "juli-fit-api",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
@@ -10,6 +10,7 @@
     "strapi": "strapi"
   },
   "dependencies": {
+    "@strapi/plugin-documentation": "4.1.8",
     "@strapi/plugin-i18n": "4.1.8",
     "@strapi/plugin-users-permissions": "4.1.8",
     "@strapi/strapi": "4.1.8",
@@ -18,7 +19,7 @@
     "pg-connection-string": "^2.5.0"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Andrei Maslau"
   },
   "strapi": {
     "uuid": "a21e9475-202c-4383-857f-11dbb3d1395f"
